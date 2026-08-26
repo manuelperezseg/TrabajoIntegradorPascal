@@ -1,0 +1,143 @@
+UNIT UNIT_ARBOL;
+{$CODEPAGE UTF8}
+INTERFACE
+USES TIPOS_ARCHIVO1,CRT;
+TYPE
+T_DATO_ARBOL = RECORD
+           CLAVE:STRING[60];
+           POS:CARDINAL;
+         END;
+T_PUNT = ^T_NODO_ARBOL;
+T_NODO_ARBOL = RECORD
+           INFO:T_DATO_ARBOL;
+           SAI,SAD:T_PUNT;
+           END;
+
+ PROCEDURE CREAR_ARBOL (VAR RAIZ:T_PUNT);
+ PROCEDURE AGREGAR_ARBOL (VAR RAIZ:T_PUNT; X:SHORTSTRING; POS:CARDINAL);
+ FUNCTION ARBOL_VACIO (RAIZ:T_PUNT): BOOLEAN;
+ FUNCTION ARBOL_LLENO (RAIZ:T_PUNT): BOOLEAN;
+ PROCEDURE INORDEN( VAR RAIZ:T_PUNT);
+ FUNCTION TAM_ARBOL(RAIZ:T_PUNT): INTEGER;
+ FUNCTION PREORDEN (RAIZ:T_PUNT;BUSCADO:SHORTSTRING):INTEGER;
+ PROCEDURE ELIMINAR_ARBOL(VAR RAIZ: T_PUNT; CLAVE: SHORTSTRING);
+ PROCEDURE INORDEN2(VAR RAIZ:T_PUNT; VAR V:T_VECTOR3;VAR I:CARDINAL);
+IMPLEMENTATION
+PROCEDURE CREAR_ARBOL (VAR RAIZ:T_PUNT);
+BEGIN
+    RAIZ:= NIL;
+  END;
+PROCEDURE AGREGAR_ARBOL (VAR RAIZ:T_PUNT; X:SHORTSTRING; POS:CARDINAL);
+BEGIN
+       IF RAIZ = NIL THEN
+                   BEGIN
+                   NEW (RAIZ);
+                   RAIZ^.INFO.CLAVE:= X;
+                   RAIZ^.INFO.POS:= POS;
+                   RAIZ^.SAI:= NIL;
+                   RAIZ^.SAD:= NIL;
+                   END ELSE
+                   IF RAIZ^.INFO.CLAVE > X THEN AGREGAR_ARBOL (RAIZ^.SAI,X,POS)       //ORDENA LOS STRING X DE MENOR A MAYOR
+                                            ELSE AGREGAR_ARBOL (RAIZ^.SAD,X,POS)
+
+  END;
+
+
+
+ FUNCTION ARBOL_VACIO (RAIZ:T_PUNT): BOOLEAN;
+   BEGIN
+        ARBOL_VACIO:= RAIZ  = NIL;
+   END;
+ FUNCTION TAM_ARBOL(RAIZ:T_PUNT): INTEGER;
+ BEGIN
+      TAM_ARBOL:=0;
+      IF RAIZ <> NIL THEN
+      BEGIN
+       TAM_ARBOL:= 1 +  TAM_ARBOL(RAIZ^.SAI) + TAM_ARBOL(RAIZ^.SAD);
+      end;
+ end;
+
+ FUNCTION ARBOL_LLENO (RAIZ:T_PUNT): BOOLEAN;
+    BEGIN
+         ARBOL_LLENO:= GETHEAPSTATUS.TOTALFREE < SIZEOF (RAIZ);
+    END;
+
+
+  FUNCTION PREORDEN (RAIZ:T_PUNT;BUSCADO:SHORTSTRING):INTEGER;     //BUSCA LA RAIZ INDICADA, (POR NOMBRE POR EJ), DEVUELVE POSICIÓN
+   BEGIN
+        IF (RAIZ =  NIL) THEN  RESULT := -1
+                         ELSE
+                 IF ( RAIZ^.INFO.CLAVE  = BUSCADO) THEN
+                                     RESULT:= RAIZ^.INFO.POS
+                                    ELSE IF RAIZ^.INFO.CLAVE > BUSCADO THEN
+                                     RESULT := PREORDEN(RAIZ^.SAI,BUSCADO)
+                                                ELSE
+                                                RESULT := PREORDEN(RAIZ^.SAD,BUSCADO);
+
+        PREORDEN:=RESULT;
+
+        END;
+
+   PROCEDURE INORDEN(VAR RAIZ:T_PUNT);             //LLAMAR  PARA OBTENER LA LISTA ORDENADA POR LA RAIZ INDICADA
+   BEGIN
+        IF RAIZ <> NIL THEN  BEGIN
+                            INORDEN (RAIZ^.SAI);
+                            //WRITELN(RAIZ^.INFO.CLAVE, ' | POS: ', RAIZ^.INFO.POS);
+                            WRITELN (RAIZ^.INFO.CLAVE);
+                            //WRITELN (RAIZ^.INFO.POS);
+                            INORDEN (RAIZ^.SAD);
+        END;
+
+   END;
+
+     PROCEDURE INORDEN2(VAR RAIZ:T_PUNT; VAR V:T_VECTOR3;VAR I:CARDINAL); //GUARDA EN UN VECTOR LAS POSICIONES(EN EL ARCHIVO) DE CADA HOJA ORDENADAS SEGÚN SU CONTENIDO
+
+       BEGIN
+        IF RAIZ <> NIL THEN
+                      BEGIN
+                        INORDEN2 (RAIZ^.SAI,V,I);
+                        I:=I+1;
+                        V[I]:=RAIZ^.INFO.POS;
+                        INORDEN2 (RAIZ^.SAD,V,I);
+                      END;
+
+       END;
+
+   PROCEDURE ELIMINAR_ARBOL(VAR RAIZ: T_PUNT; CLAVE: SHORTSTRING);
+   VAR
+     TEMP, AUX: T_PUNT;
+   BEGIN
+     IF CLAVE < RAIZ^.INFO.CLAVE THEN
+       ELIMINAR_ARBOL(RAIZ^.SAI, CLAVE)
+     ELSE IF CLAVE > RAIZ^.INFO.CLAVE THEN
+       ELIMINAR_ARBOL(RAIZ^.SAD, CLAVE)
+     ELSE
+     BEGIN
+       IF (RAIZ^.SAI = NIL) AND (RAIZ^.SAD = NIL) THEN   //NO TIEEN HIJOS
+       BEGIN
+         DISPOSE(RAIZ);
+         RAIZ := NIL;
+       END
+       ELSE IF RAIZ^.SAI = NIL THEN    //TIENE HIJO DERECHO
+       BEGIN
+         TEMP := RAIZ;
+         RAIZ := RAIZ^.SAD;
+         DISPOSE(TEMP);
+       END
+       ELSE IF RAIZ^.SAD = NIL THEN   //TIENE HIJO IZQUIERDO
+       BEGIN
+         TEMP := RAIZ;
+         RAIZ := RAIZ^.SAI;
+         DISPOSE(TEMP);
+       END
+       ELSE
+       BEGIN
+         AUX := RAIZ^.SAD;        //TIENE HIJOS IZQUIERDO Y DERECHO
+         WHILE AUX^.SAI <> NIL DO
+           AUX := AUX^.SAI;
+         RAIZ^.INFO := AUX^.INFO;  //LO REEMPLAZA POR EL SUCESOR
+         ELIMINAR_ARBOL(RAIZ^.SAD, AUX^.INFO.CLAVE);//BORRA EL DUPLICADO
+       END;
+     END;
+   END;
+           END.

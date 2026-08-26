@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="proyectofinal.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="19" Y="7"/>
+        <UsageCount Value="210"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit_arbolalumno.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UNIT_ARBOLALUMNO"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="7"/>
+        <CursorPos X="30" Y="12"/>
+        <UsageCount Value="210"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit_arbol.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UNIT_ARBOL"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="117"/>
+        <CursorPos X="75" Y="5"/>
+        <UsageCount Value="210"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="tipos_archivos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TIPOS_ARCHIVOS"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="2" Y="4"/>
+        <UsageCount Value="210"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit_archivo_alum.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UNIT_ARCHIVO_ALUM"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="52"/>
+        <CursorPos X="86" Y="10"/>
+        <UsageCount Value="209"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit_archivo_ev.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UNIT_ARCHIVO_EV"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="5"/>
+        <CursorPos Y="51"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit_arbolalev.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UNIT_ARBOLALEV"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3"/>
+        <CursorPos X="71" Y="15"/>
+        <UsageCount Value="204"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit_proc_alum.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UNIT_PROC_ALUM"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="274"/>
+        <CursorPos X="21" Y="189"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit_proc_evs.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UNIT_PROC_EVS"/>
+        <EditorIndex Value="10"/>
+        <CursorPos X="103" Y="8"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="verificadores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="VERIFICADORES"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="22"/>
+        <CursorPos X="117" Y="10"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="listados.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="LISTADOS"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="7"/>
+        <CursorPos X="93" Y="36"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="estadisticas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ESTADISTICAS"/>
+        <EditorIndex Value="12"/>
+        <CursorPos X="119" Y="15"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit_menus.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UNIT_MENUS"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="155"/>
+        <CursorPos X="101" Y="166"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="menu_principal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="MENU_PRINCIPAL"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="36"/>
+        <CursorPos X="84" Y="59"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit_manejo_interface.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UNIT_MANEJO_INTERFACE"/>
+        <EditorIndex Value="14"/>
+        <CursorPos X="28"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="manejo_listas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="MANEJO_LISTAS"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="82"/>
+        <CursorPos X="112" Y="89"/>
+        <UsageCount Value="200"/>
+      </Unit>
+      <Unit>
+        <Filename Value="tipos_archivo2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TIPOS_ARCHIVO2"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="97" Y="7"/>
+        <UsageCount Value="46"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="tipos_archivo1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TIPOS_ARCHIVO1"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="67" Y="7"/>
+        <UsageCount Value="46"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\inc\astrings.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="97"/>
+        <CursorPos X="92" Y="898"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\inc\sstrings.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="13"/>
+        <CursorPos X="10" Y="158"/>
+        <UsageCount Value="9"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="unit_arbol.pas"/>
+        <Caret Line="71" Column="63" TopLine="62"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_arbol.pas"/>
+        <Caret Line="68" Column="46" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_arbol.pas"/>
+        <Caret Line="22" Column="61" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="verificadores.pas"/>
+        <Caret Line="238" Column="52" TopLine="232"/>
+      </Position>
+      <Position>
+        <Filename Value="verificadores.pas"/>
+        <Caret Line="553" Column="44" TopLine="534"/>
+      </Position>
+      <Position>
+        <Filename Value="verificadores.pas"/>
+        <Caret Line="548" Column="17" TopLine="535"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_evs.pas"/>
+        <Caret Line="26" Column="24" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_evs.pas"/>
+        <Caret Line="34" Column="52" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_alum.pas"/>
+        <Caret Line="174" Column="46" TopLine="161"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_alum.pas"/>
+        <Caret Line="208" Column="50" TopLine="191"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_alum.pas"/>
+        <Caret Line="212" Column="43" TopLine="192"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_alum.pas"/>
+        <Caret Line="306" Column="50" TopLine="285"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_alum.pas"/>
+        <Caret Line="222" Column="108" TopLine="196"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_alum.pas"/>
+        <Caret Line="261" Column="55" TopLine="248"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_archivo_alum.pas"/>
+        <Caret Line="14" Column="65" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_evs.pas"/>
+        <Caret Line="372" Column="24" TopLine="356"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_archivo_ev.pas"/>
+        <Caret Line="89" Column="10" TopLine="66"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_alum.pas"/>
+        <Caret Line="140" Column="60" TopLine="125"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_alum.pas"/>
+        <Caret Line="6" Column="47"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_alum.pas"/>
+        <Caret Line="131" Column="14" TopLine="127"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_evs.pas"/>
+        <Caret Line="309" Column="20" TopLine="305"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_alum.pas"/>
+        <Caret Line="201" Column="27" TopLine="184"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_arbol.pas"/>
+        <Caret Line="4" Column="24"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_alum.pas"/>
+        <Caret Line="205" Column="19" TopLine="188"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_archivo_alum.pas"/>
+        <Caret Line="74" Column="25" TopLine="51"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_alum.pas"/>
+        <Caret Line="140" Column="3" TopLine="125"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_proc_alum.pas"/>
+        <Caret Line="132" Column="14" TopLine="125"/>
+      </Position>
+      <Position>
+        <Filename Value="tipos_archivo2.pas"/>
+        <Caret Line="8" Column="2"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_archivo_alum.pas"/>
+        <Caret Line="6" Column="39"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_archivo_alum.pas"/>
+        <Caret Line="67" Column="65" TopLine="55"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
