@@ -72,7 +72,7 @@ Menú Principal
 - El archivo de Evaluaciones se mantiene ordenado por fecha.
 - Proyecto modularizado en **Units**.
 
-## Datos de prueba
+[!IMPORTANT] ## Datos de prueba
 
 Para poder usar los datos de prueba incluidos en el repositorio, es necesario actualizar las rutas de los archivos dentro de las units `TIPO_ARCHIVO1` y `TIPO_ARCHIVO2`, apuntando a la ubicación donde tengas guardados los archivos de datos en tu propia máquina.
 
