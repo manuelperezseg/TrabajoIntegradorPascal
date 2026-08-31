@@ -40,7 +40,7 @@ Las dificultades contempladas son:
 - **Estadísticas:**
   - Distribución de evaluaciones por discapacidad entre dos fechas
   - Discapacidades con mayor grado de dificultad entre dos fechas
-  - Opción adicional de libre elección
+  - Cantidad de ausentes y presente en evaluaciones entre dos fechas
 
 ## Estructura del menú
 
